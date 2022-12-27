@@ -8,7 +8,7 @@ This repository provides a greatly stripped-down plugin system demonstrating how
 
 One aspect that I did not demo here is using the [configparser](https://docs.python.org/3/library/configparser.html)  library to parse a config file for information about the plugin, which is where Naomi gets the plugin name to pass to the importlib.util.spec_from_file_location() function. Instead, I just used the name of the directory the package inhabits.
 
-A second aspect I did not demo here is using the [issubclass()](https://docs.python.org/3/library/functions.html#issubclass)  function classify plugins based on which base class they inherit from.
+A second aspect I did not demo here is using the [issubclass()](https://docs.python.org/3/library/functions.html#issubclass)  function to classify plugins based on which base class they inherit from.
 
 Naomi uses these plugins in two ways. There are plugins like **stt**, **tts**, and **tti** where Naomi uses only a single plugin, which is instantiated as a specific variable. There are also cases where multiple plugins of the same type are instantiated, such as **speechhandler** and **notificationclient** plugins. These are usually placed in a list which can be iterated through, executing standard methods on each.
 
